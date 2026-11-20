@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <p class="eyebrow">PRAKTIKUM 3A</p>
+      <h1>To-Do List</h1>
+      <p class="subtitle">Atur kegiatanmu, selesaikan satu per satu.</p>
+    </header>
+
+    <form id="form-todo" class="form-todo">
+      <label class="sr-only" for="input-todo">Tulis tugas baru</label>
+      <input
+        type="text"
+        id="input-todo"
+        placeholder="Tulis tugas baru..."
+        autocomplete="off"
+        required
+      >
+      <button type="submit" class="add-button">+ Tambah</button>
+    </form>
+
+    <section class="summary" aria-live="polite">
+      <div>
+        <span class="summary-label">Progres tugas</span>
+        <strong id="stats">0 tugas belum selesai</strong>
+      </div>
+      <span id="progress-count" class="progress-count">0/0</span>
+    </section>
+
+    <div class="progress-track" aria-hidden="true">
+      <div id="progress-bar" class="progress-bar"></div>
+    </div>
+
+    <section class="task-section">
+      <div class="section-heading">
+        <h2>Daftar Tugas</h2>
+        <span id="total-count" class="total-count">0 tugas</span>
+      </div>
+      <ul id="list-todo" class="todo-list"></ul>
+    </section>
+
+    <footer class="footer">
+      <span>Data tersimpan otomatis di perangkat ini.</span>
+      <button type="button" id="clear-completed" class="clear-button">
+        Hapus tugas selesai
+      </button>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
